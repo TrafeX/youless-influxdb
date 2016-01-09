@@ -1,5 +1,4 @@
-const Promise = require('bluebird');
-var request = require('request');
+const request = require('request');
 
 function updateStats() {
     request.get({
