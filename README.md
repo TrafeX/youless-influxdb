@@ -7,7 +7,7 @@ Usage
 -----
 
     docker build -t youless .
-    docker run -it --rm --name youless -e "YOULESS_URI=http://<Youless IP>/a?f=j" -e "INFLUXDB_URI=http://<UnfluxDB uri>:8086/write?db=youless" youless
+    docker run -it --rm --name youless -e "YOULESS_URI=http://<Youless IP>" -e "INFLUXDB_URI=http://<UnfluxDB uri>:8086/write?db=youless" youless
 
 Debugging
 ---------
