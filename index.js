@@ -12,7 +12,7 @@ function updateStats() {
         response = JSON.parse(response.body);
         body =
             'current_watt,source=youless value=' + response['pwr'] + '\n' +
-            'total_kwh,source=youless value=' + response['cnt'];
+            'total_kwh,source=youless value=' + response['cnt'].replace(/,/g, '.');
         request({
             method: 'POST',
             uri: process.env.INFLUXDB_URI,
