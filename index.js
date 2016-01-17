@@ -1,8 +1,11 @@
+'use strict';
+
 const request = require('request');
 
 function updateStats() {
     request.get({
         method: 'GET',
+        timeout: 1000,
         uri: process.env.YOULESS_URI + '/a?f=j'
     }, function (error, response, body) {
         if (error || response.statusCode != 200) {
@@ -16,6 +19,7 @@ function updateStats() {
         request({
             method: 'POST',
             uri: process.env.INFLUXDB_URI,
+            timeout: 1000,
             body: body
         }, function (error, response, body) {
             if (error) {
