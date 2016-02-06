@@ -11,6 +11,6 @@ Usage
 
 Debugging
 ---------
-Add:
+Add to the run command:
 
     -v "$PWD":/usr/src/app -w /usr/src/app
