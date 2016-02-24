@@ -3,6 +3,9 @@ Publish Youless metrics to InfluxDB
 
 Every 5 seconds send the Youless metrics to InfluxDB.
 
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/trafex/youless-influxdb.svg)](https://hub.docker.com/r/trafex/youless-influxdb/)
+
 Usage
 -----
 
