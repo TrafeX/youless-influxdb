@@ -9,7 +9,7 @@ function updateStats() {
         uri: process.env.YOULESS_URI + '/a?f=j'
     }, function (error, response, body) {
         if (error || response.statusCode != 200) {
-            console.log("Couldn't reach Youless, status: " + response.statusCode);
+            console.log("Couldn't reach Youless: " + error);
         }
 
         response = JSON.parse(response.body);

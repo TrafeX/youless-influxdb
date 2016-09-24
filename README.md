@@ -9,8 +9,7 @@ Every 5 seconds send the Youless metrics to InfluxDB.
 Usage
 -----
 
-    docker build -t youless .
-    docker run -it --rm --name youless -e "YOULESS_URI=http://<Youless IP>" -e "INFLUXDB_URI=http://<UnfluxDB uri>:8086/write?db=youless" youless
+    docker run -d --name youless -e "YOULESS_URI=http://<Youless IP>" -e "INFLUXDB_URI=http://<InfluxDB uri>:8086/write?db=youless" trafex/youless-influxdb
 
 Debugging
 ---------
