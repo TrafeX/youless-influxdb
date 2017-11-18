@@ -13,9 +13,15 @@ function updateStats() {
         }
 
         response = JSON.parse(response.body);
-        body =
-            'current_watt,source=youless value=' + response['pwr'] + '\n' +
-            'total_kwh,source=youless value=' + response['cnt'].replace(/ /g, '').replace(/,/g, '.');
+        if(process.env.YOULESS_GAS) {
+            body =
+                'current_lph,source=youless value=' + response['pwr'] + '\n' +
+                'total_m3,source=youless value=' + response['cnt'].replace(/ /g, '').replace(/,/g, '.');
+        } else {
+            body =
+                'current_watt,source=youless value=' + response['pwr'] + '\n' +
+                'total_kwh,source=youless value=' + response['cnt'].replace(/ /g, '').replace(/,/g, '.');
+        }
         request({
             method: 'POST',
             uri: process.env.INFLUXDB_URI,
