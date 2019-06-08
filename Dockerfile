@@ -1,4 +1,4 @@
-FROM node:10.10.0-alpine
+FROM node:12.4-alpine
 
 LABEL Maintainer="Tim de Pater <code@trafex.nl>" \
       Description="Sending the Youless metrics to InfluxDB"

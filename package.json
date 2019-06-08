@@ -8,7 +8,7 @@
   },
   "author": "Tim de Pater <code@trafex.nl>",
   "repository": "https://github.com/TrafeX/youless-influxdb",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "dependencies": {
     "request": "^2.88.0"
   }
